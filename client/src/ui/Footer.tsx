@@ -99,7 +99,7 @@
 
 // export default Footer;
 
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { HiOutlineMail } from "react-icons/hi";
 import { BsWhatsapp } from "react-icons/bs";

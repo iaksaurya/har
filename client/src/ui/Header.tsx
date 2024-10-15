@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import React from 'react';
+// import React from 'react';
 import {
   Menu,
   MenuButton,
   MenuItem,
   MenuItems,
-  Transition,
+  // Transition,
 } from "@headlessui/react";
-import { FaChevronDown } from "react-icons/fa";
-import { FiShoppingBag, FiStar, FiUser } from "react-icons/fi";
+// import { FaChevronDown } from "react-icons/fa";
+import {  FiUser } from "react-icons/fi";
 import { GrFavorite } from "react-icons/gr";
 import { IoStorefrontSharp } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";

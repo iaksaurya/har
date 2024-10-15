@@ -1,10 +1,10 @@
 'use client'
 
-import React, { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 // import { homeBanner } from "../assets";
-import Container from "./Container";
+// import Container from "./Container";
 import LinkButton from "./LinkButton";
 
 const images = [

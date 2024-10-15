@@ -5,7 +5,7 @@ import Hightlights from "./ui/Hightlights";
 import Categories from "./ui/Categories";
 import ProductList from "./ui/ProductList";
 import DiscountedBanner from "./ui/DiscountedBanner";
-import Blog from "./ui/Blog";
+// import Blog from "./ui/Blog";
 import CollectionSection from "./ui/Blog";
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Footer from "./ui/Footer";

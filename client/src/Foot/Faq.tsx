@@ -1,5 +1,5 @@
-import { Container } from 'lucide-react';
-import React, { useState } from 'react';
+// import { Container } from 'lucide-react';
+import  { useState } from 'react';
 
 const FAQ = () => {
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
