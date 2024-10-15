@@ -8,6 +8,10 @@ import Container from "./Container";
 import LinkButton from "./LinkButton";
 
 const images = [
+  { src: "images/festival.avif", alt: "festival", label: "festival" },
+  // { src: "images/neck.jpeg", alt: "neckband"  },
+  // { src: "images/neckband.jpeg", alt: "neckband" },
+  { src: "images/necklace.webp", alt: "necklace", label: "necklace" },
   { src: "images/arcof.jpeg", alt: "Ring", label: "Ring" },
   { src: "images/11.png", alt: "Chain", label: "Chain" },
   { src: "images/22.png", alt: "Pins", label: "Pins" },
@@ -32,7 +36,7 @@ const HomeBanner = () => {
     return () => clearInterval(intervalId)
   }, [nextSlide])
   return (
-    <div className='py-5 ml-1'>
+    <div className='py-0 ml-0 rounded-2xl'>
     {/* // <Container className="relative py-5 overflow-hidden"> */}
        <div className="relative w-full max-w-12xl mx-auto overflow-hidden">
       {/* <h2 className="text-2xl font-semibold mb-4 text-center"></h2> */}

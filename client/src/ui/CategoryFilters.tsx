@@ -28,9 +28,9 @@ const CategoryFilters = ({ id }: { id: string | undefined }) => {
     <div className="hidden md:inline-flex flex-col gap-6">
       <p className="text-3xl font-bold">Filters</p>
       <div>
-        <p className="text-sm uppercase font-semibold underline underline-offset-2 decoration-[1px] mb-2">
+        {/* <p className="text-sm uppercase font-semibold underline underline-offset-2 decoration-[1px] mb-2">
           Select Categories
-        </p>
+        </p> */}
         <div className="flex flex-col gap-y-2 min-w-40">
           {loading ? (
             <div className="flex items-center justify-center my-5">

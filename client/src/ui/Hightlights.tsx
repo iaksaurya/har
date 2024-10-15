@@ -28,7 +28,7 @@ const Hightlights = () => {
           className="relative h-60 rounded-lg shadow-md cursor-pointer overflow-hidden group"
         >
           <div
-            className="absolute inset-0 bg-cover bg-center rounded-lg transition-transform duration-300 group-hover:scale-110"
+            className="absolute inset-0 bg-cover bg-center rounded-lg transition-transform duration-300 group-hover:scale-110 bg-slate-300"
             style={{
               backgroundImage: `url(${item?.image})`,
               color: item?.color,
@@ -40,10 +40,10 @@ const Hightlights = () => {
             style={{ color: item?.color }}
           >
             <div>
-              <h3 className="text-2xl font-bold max-w-44">{item?.name}</h3>
-              <p className="text-base font-bold mt-4">{item?.title}</p>
+              <h3 className="text-2xl font-bold max-w-44 text-black">{item?.name}</h3>
+              <p className="text-base font-bold mt-4 text-stone-950">{item?.title}</p>
             </div>
-            <Link to={item?._base} className="text-base font-normal">
+            <Link to={item?._base} className="text-base font-normal text-green-800">
               {item?.buttonTitle}
             </Link>
           </div>

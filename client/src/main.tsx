@@ -23,6 +23,21 @@ import Personalization from "./pages/Personalization.tsx";
 import Size from "./pages/Size.tsx";
 import Lend from "./pages/Lend.tsx";
 import Blog from "./pages/Blog.tsx";
+import AboutUs from "./Foot/AboutUs.tsx";
+import Art from "./Foot/Art.tsx";
+import BuyPack from "./Foot/BuyPack.tsx";
+import Contact from "./Foot/ContactUs.tsx";
+import Exchange from "./Foot/Exchange.tsx";
+import Faq from "./Foot/Faq.tsx";
+import GPR from "./Foot/GPR.tsx";
+import KnowUs from "./Foot/KnowUs.tsx";
+import Lending from "./Foot/Lending.tsx";
+import Personalisation from "./Foot/Persionalisatio.tsx";
+import Repair from "./Foot/Repair.tsx";
+import Returns from "./Foot/Return.tsx";
+import TermsConditions from "./Foot/TermConditions.tsx";
+
+
 
 const RouterLayout = () => {
   return (
@@ -39,9 +54,60 @@ const router = createBrowserRouter([
     element: <RouterLayout />,
     children: [
       {
+        path: "/art",
+        element: <Art />,
+      },
+      {
+        path: "/buyPack",
+        element: <BuyPack />,
+      },
+      {
+        path: "/contactUs",
+        element: <Contact />,
+      },
+      {
+        path: "/exchange",
+        element: <Exchange />,
+      },
+      {
+        path: "/faqs",
+        element: <Faq />,
+      },
+      {
+        path: "/gpr",
+        element: <GPR />,
+      },
+      {
+        path: "/knowUs",
+        element: <KnowUs />,
+      },
+      {
+        path: "/lending",
+        element: <Lending />,
+      },
+      {
+        path: "/personalisation",
+        element: <Personalisation />,
+      },
+      {
+        path: "/repairs",
+        element: <Repair />,
+      },
+      {
+        path: "/returns",
+        element: <Returns />,
+      },
+      {
+        path: "/termCondition",
+        element: <TermsConditions />,
+      },
+      
+      
+      {
         path: "/",
         element: <App />,
       },
+      
       {
         path: "/product",
         element: <Product />,
@@ -109,6 +175,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/aboutUs",
+        element: <AboutUs />,
       },
       
     ],

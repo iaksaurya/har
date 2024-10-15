@@ -13,38 +13,47 @@ import { Link } from "react-router-dom";
 
 const DiscountedBanner = () => {
   const popularSearchItems = [
-    { title: "Smart Watches", link: "smartWatches" },
-    { title: "Headphone", link: "headphones" },
-    { title: "Cameras", link: "camerasAndPhotos" },
-    { title: "Audio", link: "tvAndAudio" },
-    { title: "Laptop & Computers", link: "computersAndLaptop" },
-    { title: "Cell Phone", link: "cellPhones" },
+    // { title: "Smart Watches", link: "smartWatches" },
+    // { title: "Headphone", link: "headphones" },
+    // { title: "Cameras", link: "camerasAndPhotos" },
+    // { title: "Audio", link: "tvAndAudio" },
+    // { title: "Laptop & Computers", link: "computersAndLaptop" },
+    // { title: "Cell Phone", link: "cellPhones" },
+    { title: "Weddings", link: "smartWatches" },
+    { title: "Parents", link: "smartWatches" },
+    { title: "Coples", link: "smartWatches" },
+    { title: "Brother", link: "smartWatches" },
+    { title: "Love", link: "smartWatches" },
+    { title: "Friends", link: "smartWatches" },
+    { title: "Her", link: "smartWatches" },
+    { title: "His", link: "smartWatches" },
+    
   ];
   return (
     <Container>
-      <div>
-        <Title text="Shop By Collection" />
-        <div className="w-full h-[1px] bg-gray-200 mt-3" />
+      <div className="flex flex-col items-center">
+        <Title text="Shop By Emotions" />
+        <div className="w-full h-[1px] bg-gray-400 mt-3" />
       </div>
-      <div className="my-7 flex items-center flex-wrap gap-4">
+      <div className="my-7 flex items-center flex-wrap gap-10 ml-7">
         {popularSearchItems?.map(({ title, link }) => (
           <Link
             key={title}
             to={`/category/${link}`}
-            className="border border-[px] border-gray-300 px-8 py-3 rounded-full capitalize font-medium hover:bg-black hover:text-white duration-200"
+            className="border border-[px] border-gray-300 px-8 py-3 rounded-full capitalize font-medium hover:bg-black bg-slate-200 hover:text-white duration-200"
           >
             {title}
           </Link>
         ))}
       </div>
-      <div className="w-full py-5 md:py-0 my-12 bg-[#f6f6f6] rounded-lg flex items-center justify-between overflow-hidden">
+      {/* <div className="w-full py-5 md:py-0 my-12 bg-[#f6f6f6] rounded-lg flex items-center justify-between overflow-hidden"> */}
         {/* <img
           src={1}
           alt="discountedImgOne"
           className="hidden lg:inline-flex h-36"
         /> */}
-        <div className="flex flex-col flex-1 gap-1 items-center">
-          <div className="flex items-center justify-center gap-x-3 text-xl md:text-4xl font-bold">
+        {/* <div className="flex flex-col flex-1 gap-1 items-center"> */}
+          {/* <div className="flex items-center justify-center gap-x-3 text-xl md:text-4xl font-bold">
             <h2>Harmaig Ring</h2>
             <Link
               to={"/product"}
@@ -52,19 +61,22 @@ const DiscountedBanner = () => {
             >
               Discount 20%
             </Link>
-          </div>
-          <p className="text-sm text-gray-600 font-medium">
+          </div> */}
+          {/* <p className="text-sm text-gray-600 font-medium">
             Let's go for your dream
-          </p>
-        </div>
+          </p> */}
+        {/* </div> */}
         {/* <img
           src={2}
           alt="discountedImgTwo"
           className="hidden lg:inline-flex h-36"
         /> */}
+      {/* </div> */}
+      <div className="mt-15">
+      <div className="flex flex-col items-center">
+        <Title text="JWELLERY GUIDES" />
+        <div className="w-full h-[1px] bg-gray-400 mt-3" />
       </div>
-      <div className="mt-7">
-        <p className="font-bold text-2xl">JWELLERY GUIDES</p>
         <div className=" mt-7  gap bg-slate-200 rounded-full h-28">
           <div className=" flex items-center justify-center mb-0 px-0 py-0 cursor-pointer group h-28">
           <Link

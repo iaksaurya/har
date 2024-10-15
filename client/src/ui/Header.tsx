@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import React from 'react';
 import {
   Menu,
   MenuButton,
@@ -23,14 +24,16 @@ import { getData } from "../lib";
 import { CategoryProps, ProductProps } from "../../type";
 import ProductCard from "./ProductCard";
 import { store } from "../lib/store";
+import { IoBagCheck } from "react-icons/io5";
 
 const bottomNavigation = [
-  { title: "Shop", link: "/product" },
-  { title: "Orders", link: "/orders" },
-  { title: "Exchange Program", link: "/ExchangeProgram" },
-  { title: "Persionalization", link: "/Persionalization" },
-  { title: "Blog", link: "/blog" },
-  { title: "Lend", link: "/lend" },
+  // { title: "Diamond", link: "/product" },
+  // { title: "Earings", link: "/orders" },
+  // { title: "Rings", link: "/ExchangeProgram" },
+  // { title: "Digital Gold", link: "/Persionalization" },
+  { title: "BLOGS", link: "/blog" },
+  // { title: "Wedding", link: "/lend" },
+  // { title: "More", link: "/lend" },
 ];
 
 const Header = () => {
@@ -86,7 +89,7 @@ const Header = () => {
             type="text"
             onChange={(e) => setSearchText(e.target.value)}
             value={searchText}
-            placeholder="Search products..."
+            placeholder="Search for Gold Jewellery, Diamond Jewellery and more..."
             className="w-full flex-1 rounded-full text-black text-lg placeholder:text-base placeholder:tracking-wide shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-normal focus:ring-1 focus:ring-darkText sm:text-sm px-4 py-2 bg-zinc-100"
           />
           {searchText ? (
@@ -124,7 +127,7 @@ const Header = () => {
         )}
 
         {/* Menubar */}
-        <div className="flex items-center gap-x-6 text-2xl">
+        <div className="flex items-center gap-x-6 text-2xl mr-0">
           <Link to={"/profile"}>
             {currentUser ? (
               <img
@@ -133,11 +136,11 @@ const Header = () => {
                 className="w-10 h-10 rounded-full object-cover"
               />
             ) : (
-              <FiUser className="hover:text-skyText duration-200 cursor-pointer" />
+              <FiUser className="hover:text-skyText duration-200 cursor-pointer" title="User" />
             )}
           </Link>
           <Link to={"/favorite"} className="relative block">
-            <GrFavorite className="hover:text-skyText duration-200 cursor-pointer" />
+            <GrFavorite className="hover:text-skyText duration-200 cursor-pointer" title="Favorites" />
             <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               {favoriteProduct?.length > 0 ? favoriteProduct?.length : "0"}
               
@@ -145,7 +148,7 @@ const Header = () => {
             </span>
           </Link>
           <Link to={"/cart"} className="relative block">
-            <FaCartPlus className="hover:text-skyText duration-200 cursor-pointer" />
+            <FaCartPlus className="hover:text-skyText duration-200 cursor-pointer" title="Cart"/>
             <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               {cartProduct?.length > 0 ? cartProduct?.length : "0"}
             </span>
@@ -153,31 +156,37 @@ const Header = () => {
             {/* <FiShoppingBag/>  */}
           </Link>
 
-          <Link to={"/stores"} className="relative block">
-             <IoStorefrontSharp  className="hover:text-skyText duration-200 cursor-pointer" />
+          
+          <Link to={"/orders"} className="relative block">
+             <IoBagCheck  className="hover:text-skyText duration-200 cursor-pointer h-7 w-7" title="Orders" />
             
           </Link>
-
+          <Link to={"/stores"} className="relative block">
+             <IoStorefrontSharp  className="hover:text-skyText duration-200 cursor-pointer" title="Stores"/>
+            
+          </Link>
 
         </div>
       </div>
       <div className="w-full bg-darkText text-whiteText">
-        <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
+        <Container className="py-2  flex items-center gap-5 justify-between">
+        
           <Menu>
-            <MenuButton className="inline-flex items-center gap-2 rounded-md border border-gray-400 hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
-              Select Category <FaChevronDown className="text-base mt-1" />
+            <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+             ALL JWELLERY
+             {/* <FaChevronDown className="text-base mt-1" /> */}
             </MenuButton>
-            <Transition
+            {/* <Transition
               enter="transition ease-out duration-75"
               enterFrom="opacity-0 scale-95"
               enterTo="opacity-100 scale-100"
               leave="transition ease-in duration-100"
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
-            >
+            > */}
               <MenuItems
                 anchor="bottom end"
-                className="w-52 origin-top-right rounded-xl border border-white/5 bg-black p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
+                className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
               >
                 {categories.map((item: CategoryProps) => (
                   <MenuItem key={item?._id}>
@@ -195,8 +204,201 @@ const Header = () => {
                   </MenuItem>
                 ))}
               </MenuItems>
-            </Transition>
+            {/* </Transition> */}
           </Menu>
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+             DIAMOND 
+            </MenuButton>
+           
+              <MenuItems
+                anchor="bottom end"
+                // className="w-52 origin-top-right rounded-xl border border-white/5 bg-slate-800 p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50 "
+              className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+              >
+                {categories.map((item: CategoryProps) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            
+          </Menu>
+          
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+             EARINGS 
+            </MenuButton>
+            
+              <MenuItems
+                anchor="bottom end"
+                // className="w-52 origin-top-right rounded-xl border border-white/5 bg-slate-800 p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50 "
+              className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+              >
+                {categories.map((item: CategoryProps) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            
+          </Menu>
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+             RINGS 
+            </MenuButton>
+            
+              <MenuItems
+                anchor="bottom end"
+               className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+               >
+                {categories.map((item: CategoryProps) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            
+          </Menu>
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+             DIGITAL Gold 
+            </MenuButton>
+            
+              <MenuItems
+                anchor="bottom end"
+               className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+             >
+                {categories.map((item: CategoryProps) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            
+          </Menu>
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+             COLLECTIONS
+            </MenuButton>
+            
+              <MenuItems
+                anchor="bottom end"
+               className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+               >
+                {categories.map((item: CategoryProps) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            
+          </Menu>
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+             WEDDING
+            </MenuButton>
+            
+              <MenuItems
+                anchor="bottom end"
+                className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+                >
+                {categories.map((item: CategoryProps) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+           
+          </Menu>
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+             MORE
+            </MenuButton>
+            
+              <MenuItems
+                anchor="bottom end"
+                className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+                >
+                {categories.map((item: CategoryProps) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            
+          </Menu>
+          
           {bottomNavigation.map(({ title, link }) => (
             <Link
               to={link}

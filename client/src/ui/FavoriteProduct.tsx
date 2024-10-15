@@ -10,7 +10,7 @@ const FavoriteProduct = ({ product }: { product: ProductProps }) => {
   const { removeFromFavorite } = store();
   const navigate = useNavigate();
   return (
-    <div className="flex py-6">
+    <div className="flex py-6 rounded-3xl bg-slate-100 mb-2">
       <div className="min-w-0 flex-1 lg:flex lg:flex-col">
         <div className="lg:flex-1">
           <div className="sm:flex">

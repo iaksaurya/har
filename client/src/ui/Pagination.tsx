@@ -66,7 +66,7 @@ const Pagination = () => {
           pageCount={pageCount}
           previousLabel=""
           pageLinkClassName="w-9 h-9 border[1px] border-lightColor hover:border-gray-500 duration-300 flex justify-center items-center"
-          pageClassName="mr-6"
+          pageClassName="mr-6 "
           containerClassName="flex text-base font-semibold py-10"
           activeClassName="bg-black text-white"
         />
