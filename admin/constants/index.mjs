@@ -11,137 +11,401 @@ const cat = {
   tablets: "tablets",
   computersAndLaptop: "computersAndLaptop",
   camerasAndPhotos: "camerasAndPhotos",
+
+  // Bangle:"Bangle",
+  // Chain:"Chain",
+  // Bracelet:"Bracelet",
+  // Earring:"Earring",
+  // Necklace:"Necklace",
+  // Mangalsutra:"Mangalsutra",
+  // Pendant:"Pendant",
+  // Ring:"Ring",
+  // Wedding:"Wedding",
+  // Gift:"Gift",
+
 };
 export const categories = [
   {
     _id: 1001,
-    name: "TV & Audio",
-    image: "https://i.ibb.co/kM0FR2h/cat-Tv-Audio.webp",
+    name: "Bangles",
+    image: "https://i.postimg.cc/htfnJmCF/Bangles-X48-000gm.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "tvAndAudio",
   },
   {
     _id: 1002,
-    name: "TV Box",
-    image: "https://i.ibb.co/71hR65V/catTvBox.webp",
+    name: "Beacelets",
+    image: "https://i.postimg.cc/htfnJmCF/Bangles-X48-000gm.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "tvBox",
+    _base: "tvAndAudio",
   },
+
   {
     _id: 1003,
-    name: "Power Tools",
-    image: "https://i.ibb.co/0V0g6Gz/cat-Powertool.webp",
+    name: "Chains",
+    image: "https://i.postimg.cc/TPtP8xHG/file-20-upscayl-3x-realesrgan-x4plus.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "powerTools",
+    _base: "headphones",
   },
+
   {
     _id: 1004,
-    name: "Headphones",
-    image: "https://i.ibb.co/zST2Xdp/cat-Headphone.webp",
+    name: "Couple",
+    image: "https://i.postimg.cc/TPtP8xHG/file-20-upscayl-3x-realesrgan-x4plus.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "headphones",
   },
   {
     _id: 1005,
-    name: "Cell Phones",
-    image: "https://i.ibb.co/jgk59BL/catPhone.webp",
+    name: "Earings",
+    image: "https://i.postimg.cc/TPtP8xHG/file-20-upscayl-3x-realesrgan-x4plus.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "cellPhones",
+    _base: "headphones",
   },
   {
     _id: 1006,
-    name: "Smart Watches",
-    image: "https://i.ibb.co/B4NKfBZ/cat-Smart-Watch.webp",
+    name: "Men's Bracelets",
+    image: "https://i.postimg.cc/TPtP8xHG/file-20-upscayl-3x-realesrgan-x4plus.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "smartWatches",
+    _base: "headphones",
   },
+  
   {
     _id: 1007,
-    name: "Game & Video",
-    image: "https://i.ibb.co/4gwLwT2/cat-Gaming.webp",
+    name: "Men's Ring",
+    image: "https://i.postimg.cc/k4tDWZfm/Mensringx3-630.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "gameAndVideo",
+    _base: "tvAndAudio",
   },
   {
     _id: 1008,
-    name: "Robot Clean",
-    image: "https://i.ibb.co/xjpdQrr/cat-Robot-Clean.webp",
+    name: "Men's Chain",
+    image: "https://i.postimg.cc/TPtP8xHG/file-20-upscayl-3x-realesrgan-x4plus.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "robotClean",
+    _base: "headphones",
   },
   {
     _id: 1009,
-    name: "Sport Watches",
+    name: "Mangalsutra",
+    image: "https://i.postimg.cc/TPtP8xHG/file-20-upscayl-3x-realesrgan-x4plus.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "headphones",
+  },
+  
+  {
+    _id: 1010,
+    name: "Nacklace",
+    image: "https://i.postimg.cc/QM8MnCm0/Necklace-X12-980.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "powerTools",
+  },
+  {
+    _id: 1011,
+    name: "Pendants",
+    image: "https://i.postimg.cc/TPtP8xHG/file-20-upscayl-3x-realesrgan-x4plus.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "headphones",
+  },
+  {
+    _id: 1012,
+    name: "Woman's Rings",
+    image: "https://i.postimg.cc/TPtP8xHG/file-20-upscayl-3x-realesrgan-x4plus.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "headphones",
+  },
+  // {
+  //   _id: 1013,
+  //   name: "Cell Phones",
+  //   image: "https://i.ibb.co/jgk59BL/catPhone.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+  //   _base: "cellPhones",
+  // },
+  // {
+  //   _id: 1014,
+  //   name: "Smart Watches",
+  //   image: "https://i.ibb.co/B4NKfBZ/cat-Smart-Watch.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+  //   _base: "smartWatches",
+  // },
+  // {
+  //   _id: 1015,
+  //   name: "Game & Video",
+  //   image: "https://i.ibb.co/4gwLwT2/cat-Gaming.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+  //   _base: "gameAndVideo",
+  // },
+  // {
+  //   _id: 1016,
+  //   name: "Robot Clean",
+  //   image: "https://i.ibb.co/xjpdQrr/cat-Robot-Clean.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+  //   _base: "robotClean",
+  // },
+  // {
+  //   _id: 1017,
+  //   name: "Sport Watches",
+  //   image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+  //   _base: "sportWatches",
+  // },
+  // {
+  //   _id: 1010,
+  //   name: "Tablets",
+  //   image: "https://i.ibb.co/qCzTx4F/cat-Tablet.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+  //   _base: "tablets",
+  // },
+  // {
+  //   _id: 1011,
+  //   name: "Computers & Laptop",
+  //   image: "https://i.ibb.co/74bZ8PH/cat-Computer.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+  //   _base: "computersAndLaptop",
+  // },
+  // {
+  //   _id: 1012,
+  //   name: "Cameras & Photos",
+  //   image: "https://i.ibb.co/SVQVWSS/cat-Camera.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+  //   _base: "camerasAndPhotos",
+  // },
+];
+
+export const Diamond =[
+  {
+    _id: 5001,
+    name: "Diamond Rings",
     image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
     _base: "sportWatches",
   },
   {
-    _id: 1010,
-    name: "Tablets",
-    image: "https://i.ibb.co/qCzTx4F/cat-Tablet.webp",
+    _id: 5002,
+    name: "Diamond Earings",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "tablets",
+    _base: "sportWatches",
   },
   {
-    _id: 1011,
-    name: "Computers & Laptop",
-    image: "https://i.ibb.co/74bZ8PH/cat-Computer.webp",
+    _id: 5003,
+    name: "Diamond Necklaces",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "computersAndLaptop",
+    _base: "sportWatches",
+  },
+];
+export const EaringHead =[
+  {
+    _id: 6001,
+    name: "Studs",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
   },
   {
-    _id: 1012,
-    name: "Cameras & Photos",
-    image: "https://i.ibb.co/SVQVWSS/cat-Camera.webp",
+    _id: 6002,
+    name: "Hoops",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "camerasAndPhotos",
+    _base: "sportWatches",
+  },
+  {
+    _id: 6003,
+    name: "Dangles",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+];
+export const RingsHead =[
+  {
+    _id: 7001,
+    name: "Engagement Rings",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 7002,
+    name: "Wedding Bands",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 7003,
+    name: "Fashion Rings",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+];
+
+export const DigitalGold =[
+  {
+    _id: 8001,
+    name: "Invest in Gold",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 8002,
+    name: "Gold Savings",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 8003,
+    name: "Gold Loans",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+];
+export const Collections =[
+  {
+    _id: 9001,
+    name: "Festive Collection",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 9002,
+    name: "Bridal Collection",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 9003,
+    name: "Casual Collection",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+];
+export const weddings =[
+  {
+    _id: 10001,
+    name: "Bridal Jewellery",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 10002,
+    name: "Groom's Jewellery",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 10003,
+    name: "Wedding Gifts",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+];
+export const more =[
+  {
+    _id: 11001,
+    name: "Accessories",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 11002,
+    name: "Care Products",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
+  },
+  {
+    _id: 10003,
+    name: "Gifts",
+    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+    _base: "sportWatches",
   },
 ];
 
 export const highlightsProducts = [
   {
     _id: 3001,
-    name: "New Deals at Best Prices",
-    title: "From $40.00",
+    name: "New Deals",
+    title: "At low price",
     buttonTitle: "Browse Deals",
-    image: "https://i.ibb.co/G951N5B/highlights-One.webp",
+    image: "https://i.postimg.cc/Y97zP1VT/3340-XMens-ring.webp",
     _base: "/product",
     color: "#000000",
   },
   {
     _id: 3002,
-    name: "Colorful Redmi  Note 6 Pro",
+    name: "New Necklace",
     title: "From $40.00",
-    buttonTitle: "Shop Cellphone",
-    image: "https://i.ibb.co/bLRNKGq/highlights-Two.webp",
-    _base: "/category/cellPhones",
+    buttonTitle: "Shop Necklace",
+    image: "https://i.postimg.cc/QM8MnCm0/Necklace-X12-980.webp",
+    _base: "/category/powerTools",
     color: "#ffffff",
   },
   {
     _id: 3003,
-    name: "1000 mAh Power Bank",
+    name: "New Bangles",
     title: "From $40.00",
     buttonTitle: "Shop Now",
-    image: "https://i.ibb.co/svWYstT/highlights-Three.webp",
+    image: "https://i.postimg.cc/FHgRZ3yY/Bangels-X45-930.webp",
     _base: "/product",
     color: "#ffffff",
   },
 ];
 
-export const blogsData = [
+export const shopByEmotion = [
   {
     _id: 4001,
     image: "https://i.ibb.co/XbQf5HS/blogOne.webp",
@@ -173,11 +437,11 @@ export const products = [
     _id: 2001,
     name: "Divoom Tivoo Portable Bluetooth Speaker Smart Clock Alarm Pixel Art DIY By App LED Light Sign In Decoration Unique Gift",
     images: [
-      "https://i.ibb.co/m6ZN7LX/soundBox.webp",
-      "https://i.ibb.co/m6ZN7LX/soundBox.webp",
-      "https://i.ibb.co/wdV3b9q/vaccum.webp",
-      "https://i.ibb.co/tcdSfrr/blueGun.jpg",
-      "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
+      "https://i.postimg.cc/Y97zP1VT/3340-XMens-ring.webp",
+      "https://i.postimg.cc/Y97zP1VT/3340-XMens-ring.webp",
+      "https://i.postimg.cc/k4tDWZfm/Mensringx3-630.webp",
+      "https://i.postimg.cc/430m7ZvP/Mensring-X3-680.webp",
+      
     ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
@@ -198,11 +462,11 @@ export const products = [
     _id: 2002,
     name: "Xiaomi Mi Watch Lite GPS Bluetooth 5.1 Smart Watch Sports Fitness Heart Rate Monitor 1.4 Inch TFTLCD Screen 5 ATM Waterproof Mi Band",
     images: [
-      "https://i.ibb.co/2tCN9cy/watch-Three.jpg",
-      "https://i.ibb.co/m6ZN7LX/soundBox.webp",
-      "https://i.ibb.co/wdV3b9q/vaccum.webp",
-      "https://i.ibb.co/tcdSfrr/blueGun.jpg",
-      "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
+      "https://i.postimg.cc/FHgRZ3yY/Bangels-X45-930.webp",
+      "https://i.postimg.cc/jd8Kdc4Q/Bangles-X46-130.webp",
+      "https://i.postimg.cc/htfnJmCF/Bangles-X48-000gm.webp",
+      "https://i.postimg.cc/xdmS52Dt/Bangles-X50-000.webp",
+      "https://i.postimg.cc/pL4HKd7m/Bnagels-X130.webp",
     ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
@@ -223,11 +487,11 @@ export const products = [
     _id: 2003,
     name: "Fitness M3 Color Screen Smart Sport Bracelet Activity Running Tracker Heart Rate For Children Men Women Watch For IOS Android",
     images: [
-      "https://i.ibb.co/NrG9wxw/sport-Watch.jpg",
-      "https://i.ibb.co/m6ZN7LX/soundBox.webp",
-      "https://i.ibb.co/wdV3b9q/vaccum.webp",
-      "https://i.ibb.co/tcdSfrr/blueGun.jpg",
-      "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
+      "https://i.postimg.cc/QM8MnCm0/Necklace-X12-980.webp",
+      "https://i.postimg.cc/k4CLyRyg/Necklace-X14-900.png",
+      "https://i.postimg.cc/C14XrMvH/Necklace-X16-230.png",
+      "https://i.postimg.cc/7L0p7n0R/Necklace-X16-520.png",
+      "https://i.postimg.cc/NjW35z9T/Necklace-X14-050.png",
     ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
