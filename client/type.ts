@@ -50,7 +50,7 @@ export interface UserTypes {
     email: string;
     avatar: string;
     id: string;
-    address: string
+    address: string;
   };
 }
 
