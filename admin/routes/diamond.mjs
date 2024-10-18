@@ -3,7 +3,7 @@ import { Diamond } from "../constants/index.mjs";
 
 const router = Router();
 
-router.get("/categories", (req, res) => {
+router.get("/diamond", (req, res) => {
   // res.send(blogsData);
   res.send(Diamond);
 });

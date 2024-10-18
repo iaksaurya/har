@@ -21,7 +21,7 @@ import { logo } from "../assets";
 import Container from "./Container";
 import { config } from "../../config";
 import { getData } from "../lib";
-import { CategoryProps, ProductProps } from "../../type";
+import { CategoryProps, DiamondProps, ProductProps } from "../../type";
 import ProductCard from "./ProductCard";
 import { store } from "../lib/store";
 import { IoBagCheck } from "react-icons/io5";
@@ -84,7 +84,7 @@ const Header = () => {
           {/* <img src={Harmaig_logo} alt="HarmaigLogo" className="w-44 h-2" /> */}
           </Link>
         {/* SearchBar */}
-        <div className="hidden md:inline-flex max-w-3xl w-full relative">
+        <div className="hidden md:inline-flex max-w-3xl w-full relative font-bold text-sm sm:text-xl  flex-wrap">
           <input
             type="text"
             onChange={(e) => setSearchText(e.target.value)}
@@ -168,8 +168,8 @@ const Header = () => {
 
         </div>
       </div>
-      <div className="w-full bg-darkText text-whiteText">
-        <Container className="py-2  flex items-center gap-5 justify-between">
+      <div className="w-full bg-darkText text-whiteText flex flex-wrap">
+        <Container className="py-2  flex flex-wrap items-center gap-5 justify-between font-bold text-sm sm:text-xl">
         
           <Menu>
             <MenuButton className="inline-flex items-center gap-2 rounded-md  hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
@@ -216,7 +216,7 @@ const Header = () => {
                 // className="w-52 origin-top-right rounded-xl border border-white/5 bg-slate-800 p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50 "
               className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
               >
-                {categories.map((item: CategoryProps) => (
+                {categories.map((item: DiamondProps) => (
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}
@@ -403,7 +403,7 @@ const Header = () => {
             <Link
               to={link}
               key={title}
-              className="uppercase hidden md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-whiteText duration-200 relative overflow-hidden group"
+              className="uppercase hidden md:inline-flex  sm:text-xl text-sm font-semibold text-whiteText/90 hover:text-whiteText duration-200 relative overflow-hidden group"
             >
               {title}
               <span className="inline-flex w-full h-[1px] bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300" />
