@@ -8,3 +8,4 @@ router.get("/highlights", (req, res) => {
 });
 
 export default router;
+

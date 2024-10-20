@@ -21,10 +21,12 @@ import { logo } from "../assets";
 import Container from "./Container";
 import { config } from "../../config";
 import { getData } from "../lib";
-import { CategoryProps, DiamondProps, ProductProps } from "../../type";
+import { CategoryProps, CollectionProps, DiamondProps, DigitalgoldProps, EarringProps, MoreProps, ProductProps, RingProps, WeddingProps } from "../../type";
 import ProductCard from "./ProductCard";
 import { store } from "../lib/store";
 import { IoBagCheck } from "react-icons/io5";
+// import Categories from "./Categories";
+
 
 const bottomNavigation = [
   // { title: "Diamond", link: "/product" },
@@ -40,6 +42,13 @@ const Header = () => {
   const [searchText, setSearchText] = useState("");
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [Diamond, setDiamond] = useState([]);
+  const [EaringHead, setEaringHead] = useState([]);
+  const [RingsHead, setRingsHead] = useState([]);
+  const [DigitalGold, setDigitalGold] = useState([]);
+  const [Collections, setCollections] = useState([]);
+  const [weddings, setweddings] = useState([]);
+  const [more, setmore] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const { cartProduct, favoriteProduct, currentUser } = store();
   useEffect(() => {
@@ -67,6 +76,98 @@ const Header = () => {
     };
     fetchData();
   }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/diamond`;
+      try {
+        const data = await getData(endpoint);
+        setDiamond(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/earring`;
+      try {
+        const data = await getData(endpoint);
+        setEaringHead(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/ring`;
+      try {
+        const data = await getData(endpoint);
+        setRingsHead(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/digitalgold`;
+      try {
+        const data = await getData(endpoint);
+        setDigitalGold(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/collection`;
+      try {
+        const data = await getData(endpoint);
+        setCollections(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/wedding`;
+      try {
+        const data = await getData(endpoint);
+        setweddings(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/more`;
+      try {
+        const data = await getData(endpoint);
+        setmore(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+
 
   useEffect(() => {
     const filtered = products.filter((item: ProductProps) =>
@@ -77,20 +178,20 @@ const Header = () => {
 
   return (
     <div className="w-full bg-slate-300 md:sticky md:top-0 z-50">
-      <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
+      <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0 ">
         {/* Logo */}
         <Link to={"/"}>
           <img src={logo} alt="logo" className="w-40 h-10 " />
           {/* <img src={Harmaig_logo} alt="HarmaigLogo" className="w-44 h-2" /> */}
           </Link>
         {/* SearchBar */}
-        <div className="hidden md:inline-flex max-w-3xl w-full relative font-bold text-sm sm:text-xl  flex-wrap">
+        <div className="hidden md:inline-flex max-w-3xl w-full relative font-bold text-sm sm:text-xl flex-wrap">
           <input
             type="text"
             onChange={(e) => setSearchText(e.target.value)}
             value={searchText}
             placeholder="Search for Gold Jewellery, Diamond Jewellery and more..."
-            className="w-full flex-1 rounded-full text-black text-lg placeholder:text-base placeholder:tracking-wide shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-normal focus:ring-1 focus:ring-darkText sm:text-sm px-4 py-2 bg-zinc-100"
+            className="w-full flex-1 rounded-full text-black text-lg placeholder:text-base placeholder:tracking-wide shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-normal focus:ring-1 focus:ring-darkText sm:text-sm px-4 py-2 bg-zinc-100 flex flex-wrap"
           />
           {searchText ? (
             <IoClose
@@ -216,7 +317,7 @@ const Header = () => {
                 // className="w-52 origin-top-right rounded-xl border border-white/5 bg-slate-800 p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50 "
               className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
               >
-                {categories.map((item: DiamondProps) => (
+                {Diamond.map((item: DiamondProps) => (
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}
@@ -245,7 +346,7 @@ const Header = () => {
                 // className="w-52 origin-top-right rounded-xl border border-white/5 bg-slate-800 p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50 "
               className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
               >
-                {categories.map((item: CategoryProps) => (
+                {EaringHead.map((item: EarringProps) => (
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}
@@ -272,7 +373,7 @@ const Header = () => {
                 anchor="bottom end"
                className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
                >
-                {categories.map((item: CategoryProps) => (
+                {RingsHead.map((item: RingProps) => (
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}
@@ -299,7 +400,7 @@ const Header = () => {
                 anchor="bottom end"
                className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
              >
-                {categories.map((item: CategoryProps) => (
+                {DigitalGold.map((item: DigitalgoldProps) => (
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}
@@ -326,7 +427,7 @@ const Header = () => {
                 anchor="bottom end"
                className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
                >
-                {categories.map((item: CategoryProps) => (
+                {Collections.map((item: CollectionProps) => (
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}
@@ -353,7 +454,7 @@ const Header = () => {
                 anchor="bottom end"
                 className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
                 >
-                {categories.map((item: CategoryProps) => (
+                {weddings.map((item: WeddingProps) => (
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}
@@ -380,7 +481,7 @@ const Header = () => {
                 anchor="bottom end"
                 className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-400 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
                 >
-                {categories.map((item: CategoryProps) => (
+                {more.map((item: MoreProps) => (
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}

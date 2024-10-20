@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { Diamond } from "../constants/index.mjs";
-
+// import { diamond } from "../constants/index.mjs";
+import {Diamond} from "../constants/index.mjs"
 const router = Router();
 
 router.get("/diamond", (req, res) => {

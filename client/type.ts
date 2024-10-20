@@ -67,3 +67,48 @@ export interface DiamondProps {
   _base: string;
   description: string;
 }
+export interface EarringProps {
+  _id: number;
+  image: string;
+  name: string;
+  _base: string;
+  description: string;
+}
+export interface RingProps {
+  _id: number;
+  image: string;
+  name: string;
+  _base: string;
+  description: string;
+}
+export interface DigitalgoldProps {
+  _id: number;
+  image: string;
+  name: string;
+  _base: string;
+  description: string;
+}
+
+export interface CollectionProps {
+  _id: number;
+  image: string;
+  name: string;
+  _base: string;
+  description: string;
+}
+
+export interface WeddingProps {
+  _id: number;
+  image: string;
+  name: string;
+  _base: string;
+  description: string;
+}
+
+export interface MoreProps {
+  _id: number;
+  image: string;
+  name: string;
+  _base: string;
+  description: string;
+}
