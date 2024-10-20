@@ -10,7 +10,7 @@ import PriceTag from "../ui/PriceTag";
 import { MdOutlineStarOutline } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa";
 import FormattedPrice from "../ui/FormattedPrice";
-import { IoClose } from "react-icons/io5";
+// import { IoClose } from "react-icons/io5";
 import AddToCartBtn from "../ui/AddToCartBtn";
 import { productPayment } from "../assets";
 import ProductCard from "../ui/ProductCard";
@@ -21,7 +21,7 @@ const Product = () => {
   const [allProducts, setAllProducts] = useState<ProductProps[]>([]);
   const [loading, setLoading] = useState(false);
   const [imgUrl, setImgUrl] = useState("");
-  const [color, setColor] = useState("");
+  // const [color, setColor] = useState("");
   const { id } = useParams();
 
   const endpoint = id
@@ -52,7 +52,7 @@ const Product = () => {
   useEffect(() => {
     if (productData) {
       setImgUrl(productData?.images[0]);
-      setColor(productData?.colors[0]);
+      // setColor(productData?.colors[0]);
     }
   }, [productData]);
 
@@ -64,7 +64,7 @@ const Product = () => {
         <Container>
           {!!id && productData && _.isEmpty(allProducts) ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div className="flex flex-start">
+              <div className="flex flex-start bg-white rounded-2xl">
                 <div>
                   {productData?.images?.map((item, index) => (
                     <img
@@ -83,7 +83,8 @@ const Product = () => {
                   <img src={imgUrl} alt="mainImage" />
                 </div>
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 bg-white rounded-2x1">
+                <div className="ml-4 mr-4 mt-4">
                 <h2 className="text-3xl font-bold">{productData?.name}</h2>
                 <div className="flex items-center justify-between">
                   <PriceTag
@@ -121,7 +122,7 @@ const Product = () => {
                   </span>{" "}
                   upon purchase
                 </p>
-                <div>
+                {/* <div>
                   {color && (
                     <p>
                       Color:{" "}
@@ -159,7 +160,7 @@ const Product = () => {
                       <IoClose /> Clear
                     </button>
                   )}
-                </div>
+                </div> */}
                 <p>
                   Brand:{" "}
                   <span className="font-medium">{productData?.brand}</span>
@@ -171,9 +172,9 @@ const Product = () => {
                 <AddToCartBtn
                   product={productData}
                   title="Buy now"
-                  className="bg-black/80 py-3 text-base text-gray-200 hover:scale-100 hover:text-white duration-200"
+                  className="bg-black/80  text-base text-gray-200 hover:scale-100 hover:text-white duration-200 ml-1 mt-4 mr-4 mb-0 w-full "
                 />
-                <div className="bg-[#f7f7f7] p-5 rounded-md flex flex-col items-center justify-center gap-2">
+                <div className="p-5 rounded-md flex flex-col items-center justify-center gap-2 mb-0 mt-3">
                   <img
                     src={productPayment}
                     alt="payment"
@@ -182,6 +183,8 @@ const Product = () => {
                   <p className="font-semibold">
                     Guaranteed safe & secure checkout
                   </p>
+                
+                </div>
                 </div>
               </div>
             </div>

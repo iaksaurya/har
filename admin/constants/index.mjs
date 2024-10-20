@@ -485,7 +485,7 @@ export const products = [
   },
   {
     _id: 2003,
-    name: "Fitness M3 Color Screen Smart Sport Bracelet Activity Running Tracker Heart Rate For Children Men Women Watch For IOS Android",
+    name: "This is cool diamond , ha ha ha....",
     images: [
       "https://i.postimg.cc/QM8MnCm0/Necklace-X12-980.webp",
       "https://i.postimg.cc/k4CLyRyg/Necklace-X14-900.png",
