@@ -4,9 +4,9 @@ import HomeBanner from "./ui/HomeBanner";
 import Hightlights from "./ui/Hightlights";
 import Categories from "./ui/Categories";
 import ProductList from "./ui/ProductList";
-import DiscountedBanner from "./ui/DiscountedBanner";
+import Shopbyemotion from "./ui/Shopbyemotion";
 // import Blog from "./ui/Blog";
-import CollectionSection from "./ui/Blog";
+import CollectionSection from "./ui/Collectionsection";
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Footer from "./ui/Footer";
 // import AboutUs from "./Foot/AboutUs.tsx";
@@ -35,7 +35,7 @@ function App() {
       {/* <Blog /> */}
       <CollectionSection/>
        {/* DiscountedBanner */}
-       <DiscountedBanner />
+       <Shopbyemotion />
       
      
       {/* ProductList */}

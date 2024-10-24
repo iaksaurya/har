@@ -107,14 +107,14 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#d1c4c4] text-gray-800 py-10 rounded-2xl">
+    <footer className="bg-[#d1c4c4] text-gray-800 py-5 rounded-2xl">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-around">
           
           {/* Gold API Section */}
           <div className="mb-6">
-            <h4 className="text-3xl font-bold mb-4">Gold API</h4>
-            <ul className="space-y-3 text-2xl">
+            <h4 className="text-2xl font-bold mb-4">Gold API</h4>
+            <ul className="space-y-3 text-1xl">
               <li><Link to="/aboutUs" className="hover:text-gray-500">About Us</Link></li>
               <li><Link to="/knowUs" className="hover:text-gray-500">Know Us</Link></li>
               <li><Link to="/contactUs" className="hover:text-gray-500">Contact Us</Link></li>
@@ -125,20 +125,22 @@ const Footer = () => {
 
           {/* Policies Section */}
           <div className="mb-6">
-            <h4 className="text-3xl font-bold mb-4">Policies</h4>
-            <ul className="space-y-3 text-2xl">
+            <h4 className="text-2xl font-bold mb-4">Policies</h4>
+            <ul className="space-y-3 text-1xl">
               <li><Link to="/returns" className="hover:text-gray-500">30-Day Returns</Link></li>
               <li><Link to="/exchange" className="hover:text-gray-500">Lifetime Exchange</Link></li>
-              <li className="hover:text-gray-500">Buy Pack</li>
+              {/* <li className="hover:text-gray-500">Buy Pack</li> */}
+              <li><Link to="/#" className="hover:text-gray-500">Buy Pack</Link></li>
               <li><Link to="/termCondition" className="hover:text-gray-500">Terms & Conditions</Link></li>
             </ul>
           </div>
 
           {/* Services Section */}
           <div className="mb-6">
-            <h4 className="text-3xl font-bold mb-4">Services</h4>
-            <ul className="space-y-3 text-2xl">
-              <li className="hover:text-gray-500">Repairs</li>
+            <h4 className="text-2xl font-bold mb-4">Services</h4>
+            <ul className="space-y-3 text-1xl">
+             
+              <li><Link to="/#" className="hover:text-gray-500">Repairs</Link></li>
               <li><Link to="/personalisation" className="hover:text-gray-500">Personalisation</Link></li>
               <li><Link to="/art" className="hover:text-gray-500">Art of Gifting</Link></li>
               <li><Link to="/lending" className="hover:text-gray-500">Lending</Link></li>
@@ -148,24 +150,24 @@ const Footer = () => {
 
           {/* Features Section */}
           <div className="mb-6">
-            <h4 className="text-3xl font-bold mb-4">Features</h4>
-            <ul className="space-y-3 text-2xl">
-              {/* <li><Link to="/gold-subscription" className="hover:text-gray-500">Gold Subscription</Link></li>
-              <li><Link to="/gold-investment" className="hover:text-gray-500">Gold Investment</Link></li> */}
+            <h4 className="text-2xl font-bold mb-4">Features</h4>
+            <ul className="space-y-3 text-1xl">
+              <li><Link to="/#" className="hover:text-gray-500">Gold Subscription</Link></li>
+              <li><Link to="/#" className="hover:text-gray-500">Gold Investment</Link></li>
           
-              <li className="hover:text-gray-500">Gold Subscription</li>
-              <li className="hover:text-gray-500">Gold Investment</li>
+              {/* <li className="hover:text-gray-500">Gold Subscription</li>
+              <li className="hover:text-gray-500">Gold Investment</li> */}
             </ul>
           </div>
 
           {/* Contact Section */}
           <div className="mb-6">
-            <h4 className="text-3xl font-bold mb-4">Contact</h4>
-            <ul className="space-y-3 text-2xl">
+            <h4 className="text-2xl font-bold mb-4">Contact</h4>
+            <ul className="space-y-3 text-1xl">
            
-              <li className='flex gap-3'><HiOutlineMail className='gap-5 h-9'/> <a href="mailto:hello@harmaig.com"  className="hover:text-gray-500">hello@harmaig.com</a></li>
-              <li className='flex gap-3'><BsWhatsapp className='gap-5 h-9'/> <a href="tel:+917021920836" className="hover:text-gray-500">+91 7021920836</a></li>
-              <li className='flex gap-3'><FaInstagram className='gap-5 h-9'/>
+              <li className='flex gap-2'><HiOutlineMail className='gap-5 h-5'/> <a href="mailto:hello@harmaig.com"  className="hover:text-gray-500">hello@harmaig.com</a></li>
+              <li className='flex gap-2'><BsWhatsapp className='gap-5 h-5'/> <a href="tel:+917021920836" className="hover:text-gray-500">+91 7021920836</a></li>
+              <li className='flex gap-2'><FaInstagram className='gap-5 h-5'/>
                 <a 
                   href="https://www.instagram.com/harmaig_jewellers/" 
                   target="_blank" 

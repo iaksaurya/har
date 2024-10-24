@@ -22,7 +22,7 @@ import ExchangeProgram from "./pages/ExchangeProgram.tsx";
 import Personalization from "./pages/Personalization.tsx";
 import Size from "./pages/Size.tsx";
 import Lend from "./pages/Lend.tsx";
-import Blog from "./pages/Blog.tsx";
+
 import AboutUs from "./Foot/AboutUs.tsx";
 import Art from "./Foot/Art.tsx";
 import BuyPack from "./Foot/BuyPack.tsx";
@@ -36,7 +36,7 @@ import Personalisation from "./Foot/Persionalisatio.tsx";
 import Repair from "./Foot/Repair.tsx";
 import Returns from "./Foot/Return.tsx";
 import TermsConditions from "./Foot/TermConditions.tsx";
-
+import Blog from "./pages/Blog.tsx";
 
 
 const RouterLayout = () => {
@@ -56,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/art",
         element: <Art />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
       {
         path: "/buyPack",

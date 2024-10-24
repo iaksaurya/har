@@ -191,32 +191,32 @@ export const categories = [
   // },
 ];
 
-export const Diamond =[
-  {
-    _id: 5001,
-    name: "Diamond Rings",
-    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "sportWatches",
-  },
-  {
-    _id: 5002,
-    name: "Diamond Earings",
-    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "sportWatches",
-  },
-  {
-    _id: 5003,
-    name: "Diamond Necklaces",
-    image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
-    _base: "sportWatches",
-  },
-];
+// export const Diamond =[  
+//   {
+//     _id: 5001,
+//     name: "Diamond Rings",
+//     image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+//     _base: "sportWatches",
+//   },
+//   {
+//     _id: 5002,
+//     name: "Diamond Earings",
+//     image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+//     _base: "sportWatches",
+//   },
+//   {
+//     _id: 5003,
+//     name: "Diamond Necklaces",
+//     image: "https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp",
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.",
+//     _base: "sportWatches",
+//   },
+// ];
 export const EaringHead =[
   {
     _id: 6001,
