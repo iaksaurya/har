@@ -22,7 +22,6 @@ import ExchangeProgram from "./pages/ExchangeProgram.tsx";
 import Personalization from "./pages/Personalization.tsx";
 import Size from "./pages/Size.tsx";
 import Lend from "./pages/Lend.tsx";
-
 import AboutUs from "./Foot/AboutUs.tsx";
 import Art from "./Foot/Art.tsx";
 import BuyPack from "./Foot/BuyPack.tsx";
