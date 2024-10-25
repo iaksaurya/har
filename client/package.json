@@ -28,7 +28,6 @@
     "react-multi-carousel": "^2.8.5",
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.23.1",
-    "rsuite": "^5.73.0",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.3.0",
     "zustand": "^4.5.2"

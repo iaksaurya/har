@@ -60,13 +60,13 @@ export interface OrderTypes {
   paymentMethod: string;
   userEmail: string;
 }
-export interface DiamondProps {
-  _id: number;
-  image: string;
-  name: string;
-  _base: string;
-  description: string;
-}
+// export interface DiamondProps {
+//   _id: number;
+//   image: string;
+//   name: string;
+//   _base: string;
+//   description: string;
+// }
 export interface EarringProps {
   _id: number;
   image: string;
