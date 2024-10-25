@@ -69,21 +69,21 @@ const CategoryFilters = ({ id }: { id: string | undefined }) => {
               />
             </div>
           ) : 
-          // (
-          //   categories?.map((item: CategoryProps) => (
-          //     <Link
-          //       to={`/category/${item?._base}`}
-          //       key={item?._id}
-          //       className={`text-base font-medium text-start underline underline-offset-2 decoration-[1px] decoration-transparent hover:decoration-gray-950 hover:text-black duration-200 ${
-          //         item?._base === id
-          //           ? "text-greenText decoration-greenText"
-          //           : "text-lightText"
-          //       }`}
-          //     >
-          //       {item?.name}
-          //     </Link>
-          //   ))
-          // )
+          (
+            categories?.map((item: CategoryProps) => (
+              <Link
+                to={`/category/${item?._base}`}
+                key={item?._id}
+                className={`text-base font-medium text-start underline underline-offset-2 decoration-[1px] decoration-transparent hover:decoration-gray-950 hover:text-black duration-200 ${
+                  item?._base === id
+                    ? "text-greenText decoration-greenText"
+                    : "text-lightText"
+                }`}
+              >
+                {item?.name}
+              </Link>
+            ))
+          )
           // (
           //   RingsHead?.map((item:RingProps) => (
           //     <Link
@@ -99,87 +99,87 @@ const CategoryFilters = ({ id }: { id: string | undefined }) => {
           //     </Link>
           //   ))
           // )
-          <div>
-            <ul>
-              <li>
-              <Menu>
+          // <div>
+          //   <ul>
+          //     <li>
+          //     <Menu>
               
-              <MenuButton className="inline-flex items-center gap-2 rounded-md   py-1.5 px-3 font-semibold text-zinc-700 hover:text-black">
-                Price 
-               </MenuButton>
-               <MenuItems
-                // anchor="bottom end"
-               className="w-50 origin-top-right rounded-xl border border-white/5 p-1 text-xl text-zinc-600  focus:outline-none hover:text-black z-50 hover:flex flex-col "
-               >
-                {RingsHead.map((item: RingProps) => (
-                  <MenuItem key={item?._id}>
-                    <Link
-                      to={`/category/${item?._base}`}
-                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
-                    >
+          //     <MenuButton className="inline-flex items-center gap-2 rounded-md   py-1.5 px-3 font-semibold text-zinc-700 hover:text-black">
+          //       Price 
+          //      </MenuButton>
+          //      <MenuItems
+          //       // anchor="bottom end"
+          //      className="w-50 origin-top-right rounded-xl border border-white/5 p-1 text-xl text-zinc-600  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+          //      >
+          //       {RingsHead.map((item: RingProps) => (
+          //         <MenuItem key={item?._id}>
+          //           <Link
+          //             to={`/category/${item?._base}`}
+          //             className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+          //           >
                       
-                      {item?.name}
-                    </Link>
+          //             {item?.name}
+          //           </Link>
                     
-                  </MenuItem>
-                ))}
-               </MenuItems>
-              </Menu>
-              </li>
+          //         </MenuItem>
+          //       ))}
+          //      </MenuItems>
+          //     </Menu>
+          //     </li>
 
-             <li>
-            <Menu>
+          //    <li>
+          //   <Menu>
              
-             <MenuButton className="inline-flex items-center gap-2 rounded-md   py-1.5 px-3 font-semibold text-zinc-700 hover:text-black">
-                Ocassion
-              </MenuButton>
+          //    <MenuButton className="inline-flex items-center gap-2 rounded-md   py-1.5 px-3 font-semibold text-zinc-700 hover:text-black">
+          //       Ocassion
+          //     </MenuButton>
             
-             <MenuItems
-                // anchor="bottom end"
-               className="w-50 origin-top-right rounded-xl border border-white/5 p-1 text-xl text-zinc-600  focus:outline-none hover:text-black z-50 hover:flex flex-col "
-               >
-                {categories.map((item: CategoryProps) => (
-                  <MenuItem key={item?._id}>
-                    <Link
-                      to={`/category/${item?._base}`}
-                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
-                    >
+          //    <MenuItems
+          //       // anchor="bottom end"
+          //      className="w-50 origin-top-right rounded-xl border border-white/5 p-1 text-xl text-zinc-600  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+          //      >
+          //       {categories.map((item: CategoryProps) => (
+          //         <MenuItem key={item?._id}>
+          //           <Link
+          //             to={`/category/${item?._base}`}
+          //             className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+          //           >
                       
-                      {item?.name}
-                    </Link>
+          //             {item?.name}
+          //           </Link>
                     
-                  </MenuItem>
-                ))}
-              </MenuItems>
-            </Menu> 
-            </li>
-            <li>
-            <Menu>
+          //         </MenuItem>
+          //       ))}
+          //     </MenuItems>
+          //   </Menu> 
+          //   </li>
+          //   <li>
+          //   <Menu>
               
-              <MenuButton className="inline-flex items-center gap-2 rounded-md   py-1.5 px-3 font-semibold text-zinc-700 hover:text-black">
-                Purity 
-               </MenuButton>
-               <MenuItems
-                // anchor="bottom end"
-               className="w-50 origin-top-right rounded-xl border border-white/5 p-1 text-xl text-zinc-600  focus:outline-none hover:text-black z-50 hover:flex flex-col "
-               >
-                {RingsHead.map((item: RingProps) => (
-                  <MenuItem key={item?._id}>
-                    <Link
-                      to={`/category/${item?._base}`}
-                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
-                    >
+          //     <MenuButton className="inline-flex items-center gap-2 rounded-md   py-1.5 px-3 font-semibold text-zinc-700 hover:text-black">
+          //       Purity 
+          //      </MenuButton>
+          //      <MenuItems
+          //       // anchor="bottom end"
+          //      className="w-50 origin-top-right rounded-xl border border-white/5 p-1 text-xl text-zinc-600  focus:outline-none hover:text-black z-50 hover:flex flex-col "
+          //      >
+          //       {RingsHead.map((item: RingProps) => (
+          //         <MenuItem key={item?._id}>
+          //           <Link
+          //             to={`/category/${item?._base}`}
+          //             className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+          //           >
                       
-                      {item?.name}
-                    </Link>
+          //             {item?.name}
+          //           </Link>
                     
-                  </MenuItem>
-                ))}
-               </MenuItems>
-              </Menu>
-              </li>
-              </ul> 
-            </div>
+          //         </MenuItem>
+          //       ))}
+          //      </MenuItems>
+          //     </Menu>
+          //     </li>
+          //     </ul> 
+          //   </div>
           }
           
         </div>
