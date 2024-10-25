@@ -2,19 +2,19 @@ import  { useEffect, useState } from "react";
 import { config } from "../../config";
 import { getData } from "../lib";
 import { RotatingLines } from "react-loader-spinner";
-import { CategoryProps, RingProps } from "../../type";
+import { CategoryProps } from "../../type";
 import { Link } from "react-router-dom";
-import {
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  // Transition,
-} from "@headlessui/react";
+// import {
+//   Menu,
+//   MenuButton,
+//   MenuItem,
+//   MenuItems,
+//   // Transition,
+// } from "@headlessui/react";
 
 const CategoryFilters = ({ id }: { id: string | undefined }) => {
   const [categories, setCategories] = useState([]);
-   const [RingsHead, setRingsHead] = useState([]);
+  //  const [RingsHead, setRingsHead] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
@@ -33,22 +33,22 @@ const CategoryFilters = ({ id }: { id: string | undefined }) => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const endpoint = `${config?.baseUrl}/ring`;
-      try {
-        setLoading(true);
-        const data = await getData(endpoint);
-        setRingsHead(data);
-      } catch (error) {
-        console.error("Error fetching data", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const endpoint = `${config?.baseUrl}/ring`;
+  //     try {
+  //       setLoading(true);
+  //       const data = await getData(endpoint);
+  //       setRingsHead(data);
+  //     } catch (error) {
+  //       console.error("Error fetching data", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <div className="hidden md:inline-flex flex-col gap-6">

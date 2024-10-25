@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
 import Container from "./Container";
 import { config } from "../../config";
 import { getData } from "../lib";
-import { CategoryProps, CollectionProps, DigitalgoldProps, EarringProps, MoreProps, ProductProps, RingProps, WeddingProps } from "../../type";
+import { CategoryProps, CollectionProps, DigitalgoldProps, EarringProps, ProductProps, RingProps, WeddingProps } from "../../type";
 import ProductCard from "./ProductCard";
 import { store } from "../lib/store";
 import { IoBagCheck } from "react-icons/io5";

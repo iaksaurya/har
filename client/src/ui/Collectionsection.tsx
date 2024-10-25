@@ -125,7 +125,7 @@ import { GrCatalog } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import  { useState, useEffect, useCallback } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import LinkButton from "./LinkButton";
+// import LinkButton from "./LinkButton";
 // import { homeBanner } from "../assets";
 // import Container from "./Container";
 // import LinkButton from "./LinkButton";
