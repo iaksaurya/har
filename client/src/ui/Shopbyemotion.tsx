@@ -79,7 +79,7 @@ const Shopbyemotion = () => {
         <Title text="JWELLERY GUIDES" />
         <div className="w-full h-[1px] bg-gray-400 mt-3" />
       </div>
-        <div className="ml-10 flex gap-40 items-center">
+        <div className="ml-10 flex flex-wrap gap-40 items-center">
           <div className=" flex items-center justify-center mb-0 px-0 py-0 cursor-pointer  h-28">
           <Link
               to={"/size"}

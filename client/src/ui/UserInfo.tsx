@@ -46,9 +46,16 @@ const UserInfo = ({ currentUser }: UserTypes) => {
   };
 
   return (
-    <Container className="py-5 text-white">
-      <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-16">
-        <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-10">
+    <Container className="py-5 text-black">
+      <div className="relative isolate overflow-hidden bg-[#dfdbdb] px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-16 place-items-center ml-80 mr-80">
+        <div>    
+             <h2 className="text-xl font-bold tracking-tight sm:text-4xl">
+                  Welcome back, dear{" "}
+                  <span className="underline underline-offset-2 decoration-[1px] font-medium">
+                    {currentUser?.firstName} {currentUser?.lastName}
+                  </span>
+                </h2>
+        <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 mt-10">
           <img
             src={
               currentUser?.avatar
@@ -58,6 +65,10 @@ const UserInfo = ({ currentUser }: UserTypes) => {
             alt="userImage"
             className="w-40 h-40 rounded-full border border-gray-700 object-cover p-1"
           />
+            <p className="text-start mt-3 max-w-lg text-base leading-6 text-black">
+                We're thrilled to see you again. We hope you're ready for new experiences and exciting updates. If you need anything, we're here to help. Let's continue where you left off and make the most of your journey with us!"
+                </p>
+          </div>
           <div className="text-start flex-1">
             {isEditingProfile ? (
               <div>
@@ -87,15 +98,15 @@ const UserInfo = ({ currentUser }: UserTypes) => {
               </div>
             ) : (
               <>
-                <h2 className="text-xl font-bold tracking-tight sm:text-4xl">
+                {/* <h2 className="text-xl font-bold tracking-tight sm:text-4xl">
                   Welcome back, dear{" "}
                   <span className="underline underline-offset-2 decoration-[1px] font-medium">
                     {currentUser?.firstName} {currentUser?.lastName}
                   </span>
-                </h2>
-                <p className="text-start mt-3 max-w-3xl text-base leading-6 text-gray-300">
+                </h2> */}
+                {/* <p className="text-start mt-3 max-w-3xl text-base leading-6 text-black">
                 We're thrilled to see you again. We hope you're ready for new experiences and exciting updates. If you need anything, we're here to help. Let's continue where you left off and make the most of your journey with us!"
-                </p>
+                </p> */}
               </>
             )}
           </div>
@@ -113,12 +124,12 @@ const UserInfo = ({ currentUser }: UserTypes) => {
                 type="text"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                className="block w-full p-2 mt-2 text-gray-900 rounded-md"
+                className="block w-full p-2 mt-2 text-black rounded-md"
                 placeholder="Enter your address in city... ,District....., state...,country...,pincode..."
               />
               <button
                 onClick={handleAddressSave}
-                className="mt-4 rounded-md bg-white px-8 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100"
+                className="mt-4 rounded-md bg-white px-8 py-2.5 text-sm font-semibold text-black hover:bg-gray-100"
               >
                 Save Address
               </button>
@@ -146,15 +157,15 @@ const UserInfo = ({ currentUser }: UserTypes) => {
             </>
           )}
         </div>
-        <div className="text-start flex-1">
-            <h2 className="text-xl  tracking-tight sm:text-4xl ml-80 mt-5">
+        <div className="text-start flex-1 place-items-center">
+            <h2 className="text-xl  tracking-tight sm:text-4xl ml-32 mt-5">
                {/* dear{" "} */}
                Your Address
               {/* <span className="underline underline-offset-2 decoration-[1px] font-medium">
                 {currentUser?.address} 
               </span> */}
             </h2>
-            <p className="text-start *:mt-6 max-w-3xl text-base mt-3 leading-6 text-gray-300 ml-80">
+            <p className="text-start *:mt-6 max-w-3xl text-base mt-3 leading-6 text-black ml-32">
             {currentUser?.address} 
             </p>
           </div>

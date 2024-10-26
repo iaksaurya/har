@@ -2,7 +2,7 @@ const Label = ({ title, htmlFor }: { title: string; htmlFor?: string }) => {
   return (
     <label
       htmlFor={htmlFor}
-      className="block text-sm font-medium left-6 text-white"
+      className="block text-sm font-medium left-6 text-black text-center"
     >
       {title}
     </label>
