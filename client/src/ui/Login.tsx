@@ -3,6 +3,7 @@ import Label from "./Label";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../lib/firebase";
 import Loading from "./Loading";
+import Oauth from "./Oauth";
 
 const Login = ({ setLogin }: { setLogin: any }) => {
   const [loading, setLoading] = useState(false);
@@ -89,6 +90,7 @@ const Login = ({ setLogin }: { setLogin: any }) => {
         >
           {loading ? "Loading..." : "Login"}
         </button>
+        <Oauth/>
       </form>
       <p className="text-sm leading-6 text-black text-center -mt-2 py-10">
         Does not have an Account{" "}

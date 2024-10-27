@@ -8,6 +8,7 @@ import upload from "../lib/upload";
 import { doc, setDoc } from "firebase/firestore";
 import Login from "./Login";
 import Container from "./Container";
+import Oauth from "./Oauth";
 
 const Registration = () => {
   const [login, setLogin] = useState(true);
@@ -203,6 +204,7 @@ const Registration = () => {
             >
               {loading ? "Loading..." : "Submit"}
             </button>
+            <Oauth/>
             </div>
           </form>
           
