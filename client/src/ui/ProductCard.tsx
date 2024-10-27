@@ -1,16 +1,16 @@
 import { MdOutlineStarOutline } from "react-icons/md";
 import { ProductProps } from "../../type";
 import AddToCartBtn from "./AddToCartBtn";
-import { useState } from "react";
-import {
-  Button,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-  Transition,
-  TransitionChild,
-} from "@headlessui/react";
-import FormattedPrice from "./FormattedPrice";
+// import { useState } from "react";
+// import {
+//   Button,
+//   Dialog,
+//   DialogPanel,
+//   DialogTitle,
+//   Transition,
+//   TransitionChild,
+// } from "@headlessui/react";
+// import FormattedPrice from "./FormattedPrice";
 import ProductCardSideNav from "./ProductCardSideNav";
 import { useNavigate } from "react-router-dom";
 interface Props {
@@ -19,17 +19,17 @@ interface Props {
 }
 
 const ProductCard = ({ item, setSearchText }: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const navigation = useNavigate();
 
-  const open = () => {
-    setIsOpen(true);
-  };
-  const close = () => {
-    setIsOpen(false);
-  };
-  const percentage =
-    ((item?.regularPrice - item?.discountedPrice) / item?.regularPrice) * 100;
+  // const open = () => {
+  //   setIsOpen(true);
+  // };
+  // const close = () => {
+  //   setIsOpen(false);
+  // };
+  // const percentage =
+  //   ((item?.regularPrice - item?.discountedPrice) / item?.regularPrice) * 100;
 
   const handleProduct = () => {
     navigation(`/product/${item?._id}`);
@@ -38,12 +38,12 @@ const ProductCard = ({ item, setSearchText }: Props) => {
   return (
     <div className="border border-gray-200 rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer">
       <div className="w-full h-60 relative p-2 group">
-        <span
+        {/* <span
           onClick={open}
           className="bg-black text-skyText absolute left-0 right-0 w-16 text-xs text-center py-1 rounded-md font-semibold inline-block z-10"
         >
           save {percentage.toFixed(0)}%
-        </span>
+        </span> */}
         <img
           onClick={handleProduct}
           src={item?.images[0]}
@@ -66,7 +66,7 @@ const ProductCard = ({ item, setSearchText }: Props) => {
         </div>
         <AddToCartBtn product={item} />
       </div>
-      <Transition appear show={isOpen}>
+      {/* <Transition appear show={isOpen}>
         <Dialog
           as="div"
           className="relative z-10 focus:outline-none"
@@ -110,12 +110,12 @@ const ProductCard = ({ item, setSearchText }: Props) => {
                       Got it, thanks!
                     </Button>
                   </div>
-                </DialogPanel>
+                </DialogPanel>    
               </TransitionChild>
             </div>
           </div>
         </Dialog>
-      </Transition>
+      </Transition> */}
     </div>
   );
 };
