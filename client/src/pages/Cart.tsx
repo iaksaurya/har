@@ -1,29 +1,29 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaQuestionCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { store } from "../lib/store";
 import CartProduct from "../ui/CartProduct";
-import CheckoutBtn from "../ui/CheckoutBtn";
+// import CheckoutBtn from "../ui/CheckoutBtn";
 import Container from "../ui/Container";
-import FormattedPrice from "../ui/FormattedPrice";
+// import FormattedPrice from "../ui/FormattedPrice";
 
 const Cart = () => {
-  const [totalAmt, setTotalAmt] = useState({ regular: 0, discounted: 0 });
+  // const [totalAmt, setTotalAmt] = useState({ regular: 0, discounted: 0 });
   const { cartProduct } = store();
 
-  const shippingAmt = 25;
-  const taxAmt = 15;
+  // const shippingAmt = 25;
+  // const taxAmt = 15;
 
   useEffect(() => {
-    const totals = cartProduct.reduce(
-      (sum, product) => {
-        sum.regular += product?.regularPrice * product?.quantity;
-        sum.discounted += product?.discountedPrice * product?.quantity;
-        return sum;
-      },
-      { regular: 0, discounted: 0 }
-    );
-    setTotalAmt(totals);
+    // const totals = cartProduct.reduce(
+    //   (sum, product) => {
+    //     sum.regular += product?.regularPrice * product?.quantity;
+    //     sum.discounted += product?.discountedPrice * product?.quantity;
+    //     return sum;
+    //   },
+    //   { regular: 0, discounted: 0 }
+    // );
+    // setTotalAmt(totals);
   }, [cartProduct]);
   return (
     <Container>
@@ -49,7 +49,7 @@ const Cart = () => {
                 <div className="flex items-center justify-between">
                   <dt className="text-sm text-gray-600">Subtotal</dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    <FormattedPrice amount={totalAmt?.regular} />
+                    {/* <FormattedPrice amount={totalAmt?.regular} /> */}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4">
@@ -62,7 +62,7 @@ const Cart = () => {
                     />
                   </dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    <FormattedPrice amount={shippingAmt} />
+                    {/* <FormattedPrice amount={shippingAmt} /> */}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4">
@@ -75,7 +75,7 @@ const Cart = () => {
                     />
                   </dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    <FormattedPrice amount={taxAmt} />
+                    {/* <FormattedPrice amount={taxAmt} /> */}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4">
@@ -83,9 +83,9 @@ const Cart = () => {
                     Total Discount
                   </dt>
                   <dd className="text-base font-medium text-gray-500">
-                    <FormattedPrice
+                    {/* <FormattedPrice
                       amount={totalAmt?.regular - totalAmt?.discounted}
-                    />
+                    /> */}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4">
@@ -93,13 +93,13 @@ const Cart = () => {
                     Order total
                   </dt>
                   <dd className="text-lg font-bold text-gray-900">
-                    <FormattedPrice
+                    {/* <FormattedPrice
                       amount={totalAmt?.discounted + shippingAmt + taxAmt}
-                    />
+                    /> */}
                   </dd>
                 </div>
               </dl>
-              <CheckoutBtn products={cartProduct} />
+              {/* <CheckoutBtn products={cartProduct} /> */}
             </section>
           </div>
         </>

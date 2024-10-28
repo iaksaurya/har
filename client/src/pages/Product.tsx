@@ -6,10 +6,10 @@ import { getData } from "../lib";
 import Loading from "../ui/Loading";
 import Container from "../ui/Container";
 import _, {  } from "lodash";
-import PriceTag from "../ui/PriceTag";
+// import PriceTag from "../ui/PriceTag";
 import { MdOutlineStarOutline } from "react-icons/md";
-import { FaRegEye } from "react-icons/fa";
-import FormattedPrice from "../ui/FormattedPrice";
+// import { FaRegEye } from "react-icons/fa";
+// import FormattedPrice from "../ui/FormattedPrice";
 // import { IoClose } from "react-icons/io5";
 import AddToCartBtn from "../ui/AddToCartBtn";
 import { productPayment } from "../assets";
@@ -71,7 +71,7 @@ const Product = () => {
                       src={item}
                       alt="img"
                       key={index}
-                      className={`w-24 cursor-pointer opacity-80 hover:opacity-100 duration-300 ${
+                      className={`w-24  cursor-pointer opacity-80 hover:opacity-100 duration-300 ${
                         imgUrl === item &&
                         "border border-gray-500 rounded-sm opacity-100"
                       }`}
@@ -87,11 +87,11 @@ const Product = () => {
                 <div className="ml-4 mr-4 mt-4">
                 <h2 className="text-3xl font-bold">{productData?.name}</h2>
                 <div className="flex items-center justify-between">
-                  <PriceTag
+                  {/* <PriceTag
                     regularPrice={productData?.regularPrice}
                     discountedPrice={productData?.discountedPrice}
                     className="text-xl"
-                  />
+                  /> */}
                   <div className="flex items-center gap-1">
                     <div className="text-base text-lightText flex items-center">
                       <MdOutlineStarOutline />
@@ -100,17 +100,17 @@ const Product = () => {
                       <MdOutlineStarOutline />
                       <MdOutlineStarOutline />
                     </div>
-                    <p className="text-base font-semibold">{`(${productData?.reviews} reviews)`}</p>
+                    {/* <p className="text-base font-semibold">{`(${productData?.reviews} reviews)`}</p> */}
                   </div>
                 </div>
-                <p className="flex items-center">
+                {/* <p className="flex items-center">
                   <FaRegEye className="mr-1" />{" "}
                   <span className="font-semibold mr-1">
                     {productData?.reviews}
                   </span>{" "}
                   peoples are viewing this right now
-                </p>
-                <p>
+                </p> */}
+                {/* <p>
                   You are saving{" "}
                   <span className="text-base font-semibold text-green-500">
                     <FormattedPrice
@@ -121,7 +121,7 @@ const Product = () => {
                     />
                   </span>{" "}
                   upon purchase
-                </p>
+                </p> */}
                 {/* <div>
                   {color && (
                     <p>
@@ -161,6 +161,7 @@ const Product = () => {
                     </button>
                   )}
                 </div> */}
+                Purity-NA
                 <p>
                   Brand:{" "}
                   <span className="font-medium">{productData?.brand}</span>

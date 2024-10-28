@@ -4,7 +4,7 @@ import { store } from "../lib/store";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import AddToCartBtn from "./AddToCartBtn";
-import FormattedPrice from "./FormattedPrice";
+// import FormattedPrice from "./FormattedPrice";
 
 const FavoriteProduct = ({ product }: { product: ProductProps }) => {
   const { removeFromFavorite } = store();
@@ -41,7 +41,7 @@ const FavoriteProduct = ({ product }: { product: ProductProps }) => {
             <AddToCartBtn product={product} className="w-32" />
           </div>
         </div>
-        <p>
+        {/* <p>
           You are saving{" "}
           <span className="text-sm font-semibold text-green-500">
             <FormattedPrice
@@ -49,7 +49,7 @@ const FavoriteProduct = ({ product }: { product: ProductProps }) => {
             />
           </span>{" "}
           upon purchase
-        </p>
+        </p> */}
       </div>
       <div
         onClick={() => navigate(`/product/${product?._id}`)}

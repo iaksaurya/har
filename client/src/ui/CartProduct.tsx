@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ProductProps } from "../../type";
-import FormattedPrice from "./FormattedPrice";
+// import FormattedPrice from "./FormattedPrice";
 import AddToCartBtn from "./AddToCartBtn";
 import { IoClose } from "react-icons/io5";
 import { store } from "../lib/store";
@@ -37,11 +37,11 @@ const CartProduct = ({ product }: { product: ProductProps }) => {
               Category: <span className="font-medium">{product?.category}</span>
             </p>
             <div className="flex items-center gap-6 mt-2">
-              <p className="text-base font-semibold">
+              {/* <p className="text-base font-semibold">
                 <FormattedPrice
                   amount={product?.discountedPrice * product?.quantity}
                 />
-              </p>
+              </p> */}
               <AddToCartBtn product={product} showPrice={false} />
             </div>
           </div>
@@ -63,7 +63,7 @@ const CartProduct = ({ product }: { product: ProductProps }) => {
               <span>In Stock</span>
             </p>
           )}
-          <p>
+          {/* <p>
             You are saving{" "}
             <span className="text-sm font-semibold text-green-500">
               <FormattedPrice
@@ -71,7 +71,8 @@ const CartProduct = ({ product }: { product: ProductProps }) => {
               />
             </span>{" "}
             upon purchase
-          </p>
+          </p> */}
+          
         </div>
       </div>
     </div>
