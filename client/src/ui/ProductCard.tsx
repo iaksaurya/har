@@ -36,7 +36,7 @@ const ProductCard = ({ item, setSearchText }: Props) => {
     setSearchText && setSearchText("");
   };
   return (
-    <div className="border border-gray-200 rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer">
+    <div className="bg-zinc-200 border border-gray-200 rounded-lg p-1 overflow-hidden hover:border-black duration-200 cursor-pointer">
       <div className="w-full h-60 relative p-2 group">
         {/* <span
           onClick={open}
@@ -53,9 +53,9 @@ const ProductCard = ({ item, setSearchText }: Props) => {
         <ProductCardSideNav product={item} />
       </div>
       <div className="flex flex-col gap-2 px-2 pb-2">
-        <h3 className="text-xs uppercase font-semibold text-lightText">
+        {/* <h3 className="text-xs uppercase font-semibold text-lightText">
           {item?.overView}
-        </h3>
+        </h3> */}
         <h2 className="text-lg font-bold line-clamp-2">{item?.name}</h2>
         <div className="text-base text-lightText flex items-center">
           <MdOutlineStarOutline />

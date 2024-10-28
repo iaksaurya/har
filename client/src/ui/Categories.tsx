@@ -27,7 +27,7 @@ const Categories = () => {
         <div className="flex items-center justify-between">
           <Title text="Shop By Category" />
           <Link
-            to={"/category/tvAndAudio"}
+            to={"/category/antiqueDohiya"}
             className="font-medium relative group overflow-hidden"
           >
             View All Categories{" "}

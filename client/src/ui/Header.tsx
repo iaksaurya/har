@@ -25,7 +25,7 @@ import { logo } from "../assets";
 import Container from "./Container";
 import { config } from "../../config";
 import { getData } from "../lib";
-import { CategoryProps, CollectionProps, DigitalgoldProps, EarringProps, ProductProps, RingProps, WeddingProps } from "../../type";
+import { CategoryProps, CollectionProps, DigitalgoldProps, EarringProps, MoreProps, ProductProps, RingProps, WeddingProps } from "../../type";
 import ProductCard from "./ProductCard";
 import { store } from "../lib/store";
 import { IoBagCheck } from "react-icons/io5";
@@ -54,7 +54,7 @@ const Header = () => {
   const [DigitalGold, setDigitalGold] = useState([]);
   const [Collections, setCollections] = useState([]);
   const [weddings, setweddings] = useState([]);
-  // const [more, setmore] = useState([]);
+  const [more, setmore] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const { cartProduct, favoriteProduct, currentUser } = store();
   useEffect(() => {
@@ -150,18 +150,18 @@ const Header = () => {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const endpoint = `${config?.baseUrl}/more`;
-  //     try {
-  //       const data = await getData(endpoint);
-  //       setmore(data);
-  //     } catch (error) {
-  //       console.error("Error fetching data", error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/more`;
+      try {
+        const data = await getData(endpoint);
+        setmore(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
 
 
 
@@ -268,7 +268,7 @@ const Header = () => {
 
         </div>
       </div>
-      <div className="w-full bg-zinc-400 text-whiteText flex flex-wrap">
+      <div className="w-full bg-zinc-400 text-whiteText flex flex-col sm:flex-wrap">
         <Container className="py-2  flex flex-wrap items-center gap-5 justify-between font-bold text-sm sm:text-xl">
         
           <Menu>
@@ -453,10 +453,27 @@ const Header = () => {
                 anchor="bottom end"
                 className="w-80 origin-top-right rounded-xl border border-white/5 bg-slate-50 p-1 text-xl text-black  focus:outline-none hover:text-black z-50 hover:flex flex-col "
                 >
-                 <ul className="space-y-3 text-1xl">
+
+                 {more.map((item: MoreProps) => (
+                  <MenuItem key={item?._id}>
+                    <Link
+                      to={`/category/${item?._base}`}
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                    >
+                      {/* <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      /> */}
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+
+                 <ul className="space-y-3 text-1xl ml-3">
               <li><Link to="/#" className="hover:text-gray-500">Accessories</Link></li>
               <li><Link to="/#" className="hover:text-gray-500">Care Products</Link></li>
-              <li><Link to="/#" className="hover:text-gray-500">Gifts</Link></li>
+              {/* <li><Link to="/#" className="hover:text-gray-500">Gifts</Link></li> */}
              
               <li><Link to="/#" className="hover:text-gray-500">Repairs</Link></li>
               <li><Link to="/personalisation" className="hover:text-gray-500">Personalisation</Link></li>

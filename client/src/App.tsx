@@ -29,7 +29,7 @@ function App() {
       
       <BannerCategories />
       <HomeBanner />
-      <Hightlights />
+      {/* <Hightlights /> */}
       <Categories />
       {/* Blog */}
       {/* <Blog /> */}
