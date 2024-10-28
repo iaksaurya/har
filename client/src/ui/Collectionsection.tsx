@@ -212,7 +212,7 @@ const CollectionSection = () => {
        </button>
        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
        
-        <Link to="https://har-nszj.vercel.app/" className="relative block">
+        <Link to="https://drive.google.com/file/d/1EOnX27Fes4HTTIBhyb682MLQJ-bL-Y8a/view" className="relative block">
              <GrCatalog  className="hover:text-zinc-800 duration-200 text-neutral-500 cursor-pointer h-20 w-20" title="Catalogues" />          
              <h1 className="">Catalogues</h1>
          </Link>
