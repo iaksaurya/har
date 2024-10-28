@@ -18,7 +18,7 @@ import { IoStorefrontSharp } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-// import { logo } from "../assets";
+import { logo } from "../assets";
 // import {Harmaig1Logo} from "../assets"
 // import {Harmaig1Logo} from "../assets/Harmaig1Logo.webp"
 // import {Harmaig_logo} from "../assets/Harmaig_logo.jpg"
@@ -177,8 +177,8 @@ const Header = () => {
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0 mr-20 ">
         {/* Logo */}
         <Link to={"/"}>
-          <h1 className="text-bold text-black" >HARMAIG</h1>
-          {/* <img src={logo} alt="logo" className="w-40 h-10 " /> */}
+          {/* <h1 className="text-bold text-black" >HARMAIG</h1> */}
+          <img src={logo} alt="logo" className="w-20 h-16 " />
           {/* <img src={Harmaig_logo} alt="HarmaigLogo" className="w-44 h-2" /> */}
           </Link>
         {/* SearchBar */}
